@@ -8,5 +8,6 @@ router = APIRouter()
 @router.post("/analyze", response_model=EmailResponse)
 def analyze_email(email: EmailRequest):
     category = classify_email(email.body)
+    # category = "Produtivo"
     reply = generate_response(category, email.body)
     return EmailResponse(category=category, suggested_reply=reply)

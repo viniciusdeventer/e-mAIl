@@ -7,4 +7,4 @@ def classify_email(text: str) -> str:
     cleaned = preprocess_text(text)
     labels = ["Produtivo", "Improdutivo"]
     result = classifier(cleaned, candidate_labels=labels)
-    return result["labels"][0]  
+    return result["labels"][0]
