@@ -5,4 +5,4 @@ class EmailRequest(BaseModel):
 
 class EmailResponse(BaseModel):
     category: str
-    suggested_reply: str
+    response: str

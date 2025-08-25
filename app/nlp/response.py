@@ -17,7 +17,7 @@ def generate_response(email: str) -> dict:
         "- Improdutivo: Emails que não exigem ação imediata (ex.: felicitações, agradecimentos).\n\n"
         f"Email: {email}\n"
         "Responda **apenas com JSON** no seguinte formato:\n"
-        '{ "category": "Produtivo ou Improdutivo", "suggested_reply": "resposta ao email" }\n'
+        '{ "category": "Produtivo ou Improdutivo", "response": "resposta ao email" }\n'
         "Não inclua nenhum texto fora do JSON."
     )
 
@@ -34,7 +34,7 @@ def generate_response(email: str) -> dict:
     except json.JSONDecodeError:
         reply = {
             "category": "Não classificado",
-            "suggested_reply": "Não foi possível gerar uma resposta."
+            "response": "Não foi possível gerar uma resposta."
         }
 
     return reply
