@@ -10,7 +10,8 @@ app = FastAPI(title="emAIl")
 app.include_router(router, prefix="/api")
 
 origins = [
-    "http://localhost:5173",  # Vite dev server
+    "http://localhost:5173",  
+    "https://e-mail-yh7j.onrender.com",
 ]
 
 app.add_middleware(
