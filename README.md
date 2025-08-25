@@ -18,6 +18,11 @@ git clone https://github.com/viniciusdeventer/e-mAIl.git
 2. Copie o arquivo de exemplo .env para criar seu arquivo de variáveis de ambiente:
 cp .env.example .env
 
+3. Criar ambiente virtual
+python -m venv venv
+source venv/bin/activate    # Linux/Mac
+venv\Scripts\activate       # Windows
+
 3. Instale as dependências do Python:
 pip install -r requirements.txt
 
@@ -44,17 +49,6 @@ npm run dev
 
 4. A aplicação frontend estará disponível em:
 http://localhost:5173
-
----
-
-## Estrutura do Projeto
-
-.
-├─ app/                # Código da API FastAPI
-├─ client/             # Código do frontend React
-├─ .env.example        # Exemplo de variáveis de ambiente
-├─ requirements.txt    # Dependências do Python
-└─ README.md
 
 ---
 
